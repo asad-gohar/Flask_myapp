@@ -138,10 +138,12 @@ def update1():
 
     if change.role == "Student":
         pic = "student (1).jpg"
-        return render_template("show.html", user=change, msg="Student Portal",pic=pic )
+        color = "text-light"
+        return render_template("show.html", user=change, msg="Student Portal",pic=pic,colr=color )
     else:
         pic = "teacher.jpg"
-        return render_template("show.html", user=change, msg="Teacher Portal",pic=pic)
+        color = "text-dark"
+        return render_template("show.html", user=change, msg="Teacher Portal",pic=pic,   colr=color)
 
 
 @myApp.route('/admin',methods=["POST"])
