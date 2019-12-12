@@ -137,11 +137,14 @@ def update1():
     db.session.commit()
 
     if change.role == "Student":
-        return render_template("show.html", user=change, msg="Student Portal" )
+        pic = "student (1).jpg"
+        return render_template("show.html", user=change, msg="Student Portal",pic=pic )
     else:
-        return render_template("show.html", user=change, msg="Teacher Portal")
+        pic = "teacher.jpg"
+        return render_template("show.html", user=change, msg="Teacher Portal",pic=pic)
 
 
 @myApp.route('/admin',methods=["POST"])
 def admin():
     return render_template("signUP.html")
+
